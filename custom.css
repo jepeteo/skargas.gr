@@ -1,0 +1,354 @@
+/* Rantevou */
+.event-card {
+  box-shadow: 0 0 10px #ddd;
+  padding: 0px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #def;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+	color:black
+}
+.ev-card-title {
+	width:calc(100% - 300px);
+	padding: 8px 15px;
+	border-bottom: 1px dashed #ccc;
+}
+.ev-card-date {
+	min-width:300px;
+  padding: 8px 8px 8px 4px;
+	text-align:right;
+	border-bottom: 1px dashed #ccc;
+  background: #ecefff;
+  box-shadow: 0 0px 10px #aaa;
+}
+.ev-card-addr,
+.ev-card-name,
+.ev-card-cont	{
+	width:33.33%;
+  padding: 8px 15px;
+}
+
+.ev-dura {
+	padding: 5px 17px;
+	color: #666;
+  border-bottom: 1px dashed #999;
+	margin-bottom: 20px;	
+}
+
+.ev-filter {
+  background: #69c;
+  color: white;
+  padding: 0;
+  box-shadow: 0 0 10px #999;
+	border-radius:8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+span.ev-filter-label {
+  padding: 15px 30px;
+  background: #369;
+	border-radius:8px;
+}
+form.ev-filter-form {
+  padding: 10px;
+}
+input#evstartdate,
+input#evenddate{
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #456;
+}
+input#ev-filter-button{
+	padding: 8px;
+  background: #336699;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #003366;
+  margin: 0px 15px;
+	transition: color, background, box-shadow, .2s linear;
+}
+input#ev-filter-button:hover {
+    background: white;
+    color: #000;
+    border-color: #000;
+}
+
+	/* icons */
+.ev-card-date:before,
+.rc-card-date:before{
+	content: "\f017";
+  font-family: 'FontAwesome';
+	margin-right: 8px; }
+.ev-card-addr:before,
+.rc-card-addr:before {
+	content: "\f5a0";
+  font-family: 'FontAwesome';
+	margin-right: 8px; }
+.ev-card-name:before,
+.rc-card-name:before {
+	content: "\f007";
+  font-family: 'FontAwesome';
+	margin-right: 8px; }
+.ev-tel:before,
+.rc-tel:before {
+	content: "\f095";
+  font-family: 'FontAwesome';
+	margin-right: 5px; }
+.ev-mob:before,
+.rc-mob:before {
+	content: "\f3cf";
+  font-family: 'FontAwesome';
+	margin-right: 5px;
+	margin-left:15px; }
+
+.rc-mob:before {
+	margin-left:0;
+}
+
+
+	/* Show Randevou Client rc */
+.rc-card {
+  padding: 0px;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rc-card-date {
+	width:100%;
+	padding: 8px 15px;
+  background: #ecefff;
+  box-shadow: 0 0px 10px #aaa;
+}
+.rc-card-addr,
+.rc-card-name,
+.rc-card-cont	{
+	width:100%;
+  padding: 8px 15px;
+}
+
+.rc-card-cont	{
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.rc-card-cont a {
+  width: 30%;
+  padding: 10px;
+  background: #eee;
+  box-shadow: 0 0px 8px #ddd;
+  border-radius: 8px;
+  border: 1px solid #abc;
+	text-align:center;
+	color:#000;
+}
+
+	/* Responsive */
+@media screen and (min-width:1024px) and (max-width:1279px) {
+
+}
+
+@media screen and (min-width:426px) and (max-width:1023px) {
+.ev-card-addr,
+.ev-card-name,
+.ev-card-cont
+	{
+		width:100%;
+	}
+
+}
+
+@media screen and (max-width:425px) {
+	.ev-card-title,
+	.ev-card-date,
+	.ev-card-addr,
+	.ev-card-name,
+	.ev-card-cont
+		{ width:100%; }
+	.ev-card-date {
+		text-align:left;
+	}	
+	.rc-card-cont a {
+  	width: 100%;
+		margin:10px auto;
+	}
+}
+
+
+/* Rantevou End */
+
+/* Pagination */
+.wp-pagenavi {
+	margin:15px auto 10px !important;
+	text-align:center !important;	
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	border:none;
+  padding: 8px 15px;
+}
+/* End Pagination */
+
+.listclient {
+	width:100%;
+	border: 1px dashed #999;
+	font-size: 14px;
+	line-height:1.5em;
+}
+.listclient thead {
+	font-weight:bold;
+	text-align:center;
+	background:#6699CC;
+	color:white;
+}
+.listclient thead td {
+	padding: 4px 0;
+}
+.listclient tr:nth-child(even) {
+	background: #eee;
+}
+.listclient tr:hover {
+	background:#000;
+	color:white;
+}
+.listclient tr td {
+	padding:4px;
+	text-align:center;
+}
+/*.listclient tr td:first-child {
+	text-align:left;
+	padding-left:5px;
+}*/
+
+button.printbutton {
+    padding: 10px 15px;
+		font-size: 125%;
+}
+
+
+
+
+ul.crm-gal {
+		display:flex;
+		flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+	  align-items:center;
+		justify-content:center;
+}
+.crm-gal li {
+    margin: 0 0.5% 10px;
+    border: 1px solid #0004;
+    box-shadow: 0 0 4px #0004;
+    min-width: 90px;
+		max-width: 19%;
+}
+
+.client-docu{
+	display:block;
+	border: 1px dashed #bbb;
+  padding: 4px 2px;
+  margin: 4px 0;
+}
+.client-docu:hover{
+	background:#fff;
+}
+
+article.et_pb_post {
+	margin-bottom: 10px !important;
+	box-shadow: 0 0 8px #0004;
+}
+
+/* Search Pagination*/
+.crm-pagin > a, .crm-pagin > span {
+    margin: 8px;
+    border: 1px solid #0002;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 4px #0003;
+}
+
+.crm-pagin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px) {
+	.listclient td {
+		width:33.33%;
+		float:left;
+	}
+	.viewclient {
+		padding:4px;
+	}
+	.viewclient i:after {
+		content: " Προβολή Πελάτη";
+	}
+}
+
+@media screen and (min-width:426px) and (max-width:1023px) {
+	.listclient td {
+		width:50%;
+		float:left;
+	}
+	.viewclient {
+		padding:4px;
+	}
+	.viewclient i:after {
+		content: " Προβολή Πελάτη";
+	}
+}
+
+@media screen and (max-width:425px) {
+	.listclient thead {
+		display:none;
+	}
+	.listclient td {
+		width:100%;
+		float:left;
+	}
+	.viewclient {
+		padding:4px;
+	}
+	.viewclient i:after {
+		content: " Προβολή Πελάτη";
+	}
+}
+
+@media print {
+	header, footer, .viewclient i,
+	.printbutton,
+	.et_pb_row.et_pb_row_0_tb_body,
+	.crm-pagin
+	{
+		display:none;
+	}
+	.et_pb_section {
+		padding:0px;
+	}
+	.et_pb_row.et_pb_row_2_tb_body	{
+		width:100%;
+	}
+	.listclient{
+		font-size:10px;
+		line-height:1.3em;
+		border-spacing:4px;
+	}
+	.listclient tr {
+		border-bottom:1px dashed #ccc;
+	}
+	.listcllient td{
+	}
+	.listclient tr:nth-child(even) {
+		background:#efefef;
+		-webkit-print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    -ms-print-color-adjust: exact;
+    print-color-adjust: exact;
+	}
+}
