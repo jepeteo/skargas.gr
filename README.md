@@ -30,12 +30,16 @@ Also include basic info of all the scheduled "Rantevou", with pagination.
 
 **[image-gallery]** - show client's image gallery
 
-**[phone_home]** - display client's home phone 
+**[phone_home]** - display client's home phone
+
 **[phone_work]** - display client's work phone
+
 **[phone_other]** - display client's other phone
 
 **[mobile_personal]** - display client's personal mobile
+
 **[mobile_work]** - display client's work mobile
+
 **[mobile_other]** - display client's other mobile
 
 **[client-info]** - show a list of all clients, with pagination, ready to print.
