@@ -60,15 +60,16 @@ $date_next_week = date('Y-m-d H:i:s', $time_next_week);
 	*/
 
 	//Print form
-	if ($_GET['evstartdate']) {
-		$form_ev_from = date_i18n("Y-m-d", strtotime($_GET['evstartdate']));	
+	if (isset($_GET['evstartdate'])) {
+		$form_ev_from = date_i18n("Y-m-d", strtotime(sanitize_text_field($_GET['evstartdate'])));
 	} else {
-		$form_ev_from = date_i18n("Y-m-d", $time_now);
+    		$form_ev_from = date_i18n("Y-m-d", $time_now);
 	}
-	if ($_GET['evenddate']) {
-		$form_ev_to   = date_i18n("Y-m-d", strtotime($_GET['evenddate']));
+
+	if (isset($_GET['evenddate'])) {
+	    	$form_ev_to = date_i18n("Y-m-d", strtotime(sanitize_text_field($_GET['evenddate'])));
 	} else {
-		$form_ev_to = date_i18n("Y-m-d", $time_next_week);
+	    	$form_ev_to = date_i18n("Y-m-d", $time_next_week);
 	}
 	echo "<div class='ev-filter'><span class='ev-filter-label'>ΦΙΛΤΡΑ</span>
 	<form class='ev-filter-form' action='/events'>
@@ -92,7 +93,7 @@ $date_next_week = date('Y-m-d H:i:s', $time_next_week);
 	echo $ev_date_start . " - " . $ev_date_end;
 	*/
 	
-// // // Query events.
+// // // Query events CPT.
 // 
 // 
 $posts = get_posts(array(
@@ -399,7 +400,9 @@ add_shortcode( 'mobile_other', 'show_mobile_other' );
 function show_client_info( $atts ){
 	
 	ob_start();
-	if($_GET['s'] && !empty($_GET['s'])) { $stext = $_GET['s']; }
+	if (isset($_GET['s']) && !empty($_GET['s'])) {
+		$stext = sanitize_text_field($_GET['s']);
+	}
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 	$args= array(
